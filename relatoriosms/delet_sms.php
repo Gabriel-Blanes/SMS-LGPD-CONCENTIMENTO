@@ -1,7 +1,7 @@
 <?php
 include_once('conn.php');
 
-$sms_id = $_POST["sms_id"];
+$sms_id =  $mysqli($mysqli,$_POST["sms_id"]);
 $sms_status = "DELETED";
 $sms_date_delet = date("d/m/Y");
 

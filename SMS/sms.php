@@ -2,8 +2,8 @@
 
     require_once('conn.php');
 
-    $numero = $_GET['numero'];
-    $mensagem = $_GET['msg'];
+    $numero = mysqli_escape_string ($mysqli,$_GET['numero']);
+    $mensagem = mysqli_escape_string($mysqli,$_GET['msg']);
 
     //Verifico se ja tem numero
     $queryFone = "SELECT sms_fone from sms_cadastro WHERE sms_fone = '$numero'";
